@@ -1,5 +1,48 @@
 # Docker cheetshet
 
+## Images Management Commands
+
+### List and Search
+
+List all local images  
+```shell
+docker images
+```
+
+List running containers
+```shell
+docker search <image_name>
+```
+
+Pull an image from a registry
+```shell
+docker pull <image_name>
+```
+
+Build an image from a Dockerfile
+```shell
+docker build -t <image_name>:<tag> <path_to_dockerfile_directory>
+```
+
+Tag an image for a remote repository
+```shell
+docker tag <image_name>:<tag> <repository>/<image_name>:<tag>
+```
+
+Push an image to Docker Hub or registry
+```shell
+docker push <repository>/<image_name>:<tag>
+```
+
+Remove a local image
+```shell
+docker rmi <image_name>:<tag>
+```
+Remove all unused images
+```shell
+docker image prune
+```
+
 ## Containers Management Commands
 
 ### Basic Container Commands
