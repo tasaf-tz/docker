@@ -13,6 +13,7 @@ List running containers
 ```shell
 docker search <image_name>
 ```
+### Pull and Build
 
 Pull an image from a registry
 ```shell
@@ -24,6 +25,8 @@ Build an image from a Dockerfile
 docker build -t <image_name>:<tag> <path_to_dockerfile_directory>
 ```
 
+### Tag and Push
+
 Tag an image for a remote repository
 ```shell
 docker tag <image_name>:<tag> <repository>/<image_name>:<tag>
@@ -33,6 +36,8 @@ Push an image to Docker Hub or registry
 ```shell
 docker push <repository>/<image_name>:<tag>
 ```
+
+### Remove and Prune
 
 Remove a local image
 ```shell
@@ -164,6 +169,9 @@ docker cp <host_path> <container>:<path>
 ```
 
 ## Volumes Management Commands
+
+### Create and List
+
 List all Volume
 ```shell
 docker volume ls
@@ -173,6 +181,8 @@ Create a new named volume
 ```shell
 docker volume create <volume_name>
 ```
+
+### Inspect and Remove
 
 Inspect a specific Volume
 ```shell
@@ -188,6 +198,8 @@ Prune all unused volume
 ```shell
 docker volume prune
 ```
+
+### Use Volumes with Containers
 
 Mount a volume inside a container
 ```shell
