@@ -163,8 +163,40 @@ Copy file/folder from host to container
 docker cp <host_path> <container>:<path>
 ```
 
-## Images Management Commands
-
 ## Volumes Management Commands
+List all Volume
+```shell
+docker volume ls
+```
+
+Create a new named volume	
+```shell
+docker volume create <volume_name>
+```
+
+Inspect a specific Volume
+```shell
+docker volume inspect <volume_name>
+```
+
+Remove a Volume
+```shell
+docker volume rm <volume_name>
+```
+
+Prune all unused volume
+```shell
+docker volume prune
+```
+
+Mount a volume inside a container
+```shell
+docker run -d -v <volume_name>:<container_path> <image_name>
+```
+
+Mount a host directory as a volume
+```shell
+docker run -d -v $(pwd)/data:/app/data <image_name>
+```
 
 ## Networks Management Commands
