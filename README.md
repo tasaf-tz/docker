@@ -129,7 +129,7 @@ docker logs <container>
 Check the IP address of a Docker container
 ```shell
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container_name|container_id>
-``
+```
 
 Follow container logs (live stream)
 ```shell
